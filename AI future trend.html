@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Trends 2025-2030: The Future Forged by AI & Green Transition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .kpi-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2), 0 4px 6px -2px rgba(59, 130, 246, 0.1);
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #3b82f6;
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            width: 100%;
+        }
+        .timeline-content {
+            position: relative;
+            width: calc(50% - 40px);
+            background-color: #161b22;
+            border: 1px solid #30363d;
+        }
+        .timeline-item:nth-child(odd) .timeline-content {
+            left: 0;
+            text-align: right;
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            left: calc(50% + 40px);
+            text-align: left;
+        }
+        .timeline-dot {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            border: 4px solid #0d1117;
+        }
+        .flowchart-node {
+            background-color: #161b22;
+            border: 1px solid #4ade80;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        .flowchart-node:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(74, 222, 128, 0.5);
+        }
+        .flowchart-arrow {
+            font-size: 2.5rem;
+            color: #4ade80;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 py-8 md:py-16">
+
+        <header class="text-center mb-16 md:mb-24">
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-4">Future Trends 2025-2030</h1>
+            <p class="text-xl md:text-2xl font-bold text-blue-400">The Future Forged by AI & Green Transition</p>
+            <p class="mt-4 max-w-4xl mx-auto text-lg text-gray-400">
+                Visually exploring key trends and strategies to design a sustainable and mutually beneficial future by forecasting changes over the next five years amidst the complex interplay of AI, humans, and the environment.
+            </p>
+        </header>
+        
+        <section id="overview" class="mb-16 md:mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">2025: Horizon of a New Era</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="kpi-card p-6 rounded-lg text-center">
+                    <p class="text-5xl md:text-6xl font-black text-blue-400">3.3%</p>
+                    <h3 class="mt-2 text-xl font-bold text-white">2025 Global Economic Growth Forecast</h3>
+                    <p class="mt-2 text-gray-400">The IMF projects stable growth, albeit with divergent paths among countries.</p>
+                </div>
+                <div class="kpi-card p-6 rounded-lg text-center">
+                    <p class="text-5xl md:text-6xl font-black text-emerald-400"> > Coal</p>
+                    <h3 class="mt-2 text-xl font-bold text-white">Renewable Energy Generation</h3>
+                    <p class="mt-2 text-gray-400">For the first time, renewables will surpass coal in power generation, marking a key inflection point.</p>
+                </div>
+                <div class="kpi-card p-6 rounded-lg text-center">
+                    <p class="text-5xl md:text-6xl font-black text-amber-400">Initial Deployment</p>
+                    <h3 class="mt-2 text-xl font-bold text-white">Humanoid Robots</h3>
+                    <p class="mt-2 text-gray-400">Leading companies begin initial deployments in industrial settings, heralding the age of physical AI.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="dual-transition" class="mb-16 md:mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">The Twin Engines of Change: AI & Green Energy</h2>
+            <p class="max-w-3xl mx-auto text-center text-lg text-gray-400 mb-12">
+                The future is being reshaped by two great pillars: the intelligence revolution of AI and the transition to green energy. These twin forces interact and influence each other, fundamentally transforming industry, the economy, and our lives.
+            </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div class="p-8 rounded-lg kpi-card">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-blue-400">The Evolution Trajectory of AI</h3>
+                    <div class="chart-container h-96">
+                        <canvas id="aiEvolutionChart"></canvas>
+                    </div>
+                    <p class="mt-6 text-gray-300">
+                        Beginning with the widespread use of multimodal AI, agentic AI capable of autonomous decisions will proliferate. By 2030, AI will be established as a common utility like electricity, holding a potential productivity value of $4.4 trillion.
+                    </p>
+                </div>
+                <div class="p-8 rounded-lg kpi-card">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-emerald-400">Key Energy Transition Milestones</h3>
+                    <div class="chart-container h-96">
+                        <canvas id="energyTransitionChart"></canvas>
+                    </div>
+                    <p class="mt-6 text-gray-300">
+                        The energy transition accelerates in 2025 as renewables surpass coal. Solar and wind will overtake nuclear by 2026, and by 2029, solar will become the largest renewable source, powering 46% of the grid by 2030.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="economy-jobs" class="mb-16 md:mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">A Turbulent Economy and Labor Market</h2>
+            
+            <div class="p-8 rounded-lg kpi-card mb-12">
+                <h3 class="text-2xl font-bold text-center mb-6 text-white">Major Economies Growth Rate Forecast (2025-2028)</h3>
+                <p class="text-center text-gray-400 mb-6">The global economy faces a gentle slowdown, with AI's productivity effects gradually appearing. After initial struggles, the Korean economy will seek a tech-driven recovery.</p>
+                <div class="chart-container h-96">
+                    <canvas id="gdpGrowthChart"></canvas>
+                </div>
+            </div>
+
+            <div class="p-8 rounded-lg kpi-card">
+                <h3 class="text-2xl font-bold text-center mb-6 text-white">The Future of Work: A Shifting Job Landscape</h3>
+                 <p class="text-center text-gray-400 mb-8">AI and automation are fundamentally reshaping the job market. Demand for new roles like AI specialists and green tech engineers will explode, while routine jobs decline, making the "adaptability gap" a central challenge.</p>
+                <div class="chart-container" style="height: 500px;">
+                    <canvas id="jobMarketChart"></canvas>
+                </div>
+            </div>
+        </section>
+        
+        <section id="physical-ai" class="mb-16 md:mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">The Rise of Physical AI: The Age of Robots</h2>
+            <p class="max-w-3xl mx-auto text-center text-lg text-gray-400 mb-12">
+                Beyond the digital space, AI is beginning to interact with the physical world. Humanoid and service robots will gradually expand from manufacturing and logistics into our daily lives.
+            </p>
+             <div class="p-8 rounded-lg kpi-card">
+                <h3 class="text-2xl font-bold text-center mb-6 text-white">Humanoid & Personal Robot Market Outlook</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="chart-container h-80">
+                            <canvas id="humanoidRobotChart"></canvas>
+                        </div>
+                        <p class="mt-4 text-center text-gray-300">With mass production starting in 2026, humanoid robots will become a key industrial driver by 2030, improving productivity by up to 20-30%.</p>
+                    </div>
+                    <div>
+                        <div class="chart-container h-80">
+                            <canvas id="personalRobotMarketChart"></canvas>
+                        </div>
+                         <p class="mt-4 text-center text-gray-300">The market for personal assistant and service robots is projected to grow explosively, reaching approximately $63.8 billion by 2030.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="mb-16 md:mb-24">
+             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Systemic Challenges & Strategic Imperatives</h2>
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                 <div class="p-8 rounded-lg kpi-card">
+                     <h3 class="text-2xl font-bold text-center mb-6 text-amber-400">Governance Lag: A Mismatch of Speeds</h3>
+                     <p class="text-center text-gray-400 mb-8">The pace of tech development is outpacing the establishment of ethical norms and governance, creating systemic risks like the spread of misinformation and bias.</p>
+                     <div class="flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-center md:space-x-4">
+                         <div class="flowchart-node p-4 rounded-lg text-center w-48">
+                             <p class="text-3xl mb-2">⚡️</p>
+                             <h4 class="font-bold text-white">AI Technology Development</h4>
+                             <p class="text-sm text-gray-400">Exponential Acceleration</p>
+                         </div>
+                         <div class="flowchart-arrow font-black text-center mx-4 hidden md:block">→</div>
+                         <div class="flowchart-arrow font-black text-center my-4 md:hidden">↓</div>
+                         <div class="flowchart-node p-4 rounded-lg text-center w-48 border-red-500">
+                             <p class="text-3xl mb-2">🐢</p>
+                             <h4 class="font-bold text-white">Governance & Regulation</h4>
+                             <p class="text-sm text-gray-400">Deliberate, Gradual Response</p>
+                         </div>
+                     </div>
+                     <p class="mt-8 text-center text-gray-300">To close this gap, proactive, agile governance models and broad social consensus are essential.</p>
+                 </div>
+                 <div class="p-8 rounded-lg kpi-card">
+                     <h3 class="text-2xl font-bold text-center mb-6 text-violet-400">Intertwined Fates: The Digital & Green Transitions</h3>
+                     <p class="text-center text-gray-400 mb-8">The two mega-transitions are essential to each other's success but also have points of conflict. Optimizing this relationship is key to a sustainable future.</p>
+                     <div class="relative w-full h-48 flex items-center justify-center">
+                         <div class="absolute w-36 h-36 bg-blue-500/30 rounded-full border-2 border-blue-400 flex items-center justify-center text-center p-2" style="left: 25%;">
+                             <span class="font-bold text-white">Digital Transition</span>
+                         </div>
+                         <div class="absolute w-36 h-36 bg-emerald-500/30 rounded-full border-2 border-emerald-400 flex items-center justify-center text-center p-2" style="right: 25%;">
+                            <span class="font-bold text-white">Green Transition</span>
+                         </div>
+                         <div class="absolute z-10 text-center">
+                             <p class="font-bold text-lg text-white">🤝 Synergy</p>
+                             <p class="text-sm text-gray-300">AI-based energy optimization</p>
+                             <p class="font-bold text-lg text-white mt-2">💥 Conflict</p>
+                             <p class="text-sm text-gray-300">Data center power use, critical minerals</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </section>
+
+        <section id="strategy">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">8 Strategic Imperatives for a Mutually Beneficial Future</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="kpi-card p-6 rounded-lg">
+                    <p class="text-3xl mb-3">⚖️</p>
+                    <h3 class="font-bold text-lg text-white">Proactive & Adaptive AI Governance</h3>
+                </div>
+                <div class="kpi-card p-6 rounded-lg">
+                    <p class="text-3xl mb-3">🧠</p>
+                    <h3 class="font-bold text-lg text-white">Invest in Human Capital</h3>
+                </div>
+                <div class="kpi-card p-6 rounded-lg">
+                    <p class="text-3xl mb-3">🤝</p>
+                    <h3 class="font-bold text-lg text-white">Fair & Inclusive Transitions</h3>
+                </div>
+                <div class="kpi-card p-6 rounded-lg">
+                    <p class="text-3xl mb-3">🌿</p>
+                    <h3 class="font-bold text-lg text-white">Resilient Green Transition</h3>
+                </div>
+                <div class="kpi-card p-6 rounded-lg">
+                    <p class="text-3xl mb-3">🌐</p>
+                    <h3 class="font-bold text-lg text-white">Promote Global Cooperation</h3>
+                </div>
+                <div class="kpi-card p-6 rounded-lg">
+                    <p class="text-3xl mb-3">🛡️</p>
+                    <h3 class="font-bold text-lg text-white">Ensure Digital Trust</h3>
+                </div>
+                <div class="kpi-card p-6 rounded-lg">
+                    <p class="text-3xl mb-3">👤</p>
+                    <h3 class="font-bold text-lg text-white">Embed Human Values</h3>
+                </div>
+                <div class="kpi-card p-6 rounded-lg">
+                    <p class="text-3xl mb-3">📈</p>
+                    <h3 class="font-bold text-lg text-white">Cultivate Systemic Resilience</h3>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <footer class="text-center py-8 mt-12 border-t border-t-gray-700">
+        <p class="text-gray-500">Deep Research Report Infographic (June 2025)</p>
+    </footer>
+
+    <script>
+        const chartColors = {
+            blue: 'rgba(59, 130, 246, 0.7)',
+            emerald: 'rgba(16, 185, 129, 0.7)',
+            amber: 'rgba(245, 158, 11, 0.7)',
+            violet: 'rgba(139, 92, 246, 0.7)',
+            red: 'rgba(239, 68, 68, 0.7)',
+            sky: 'rgba(14, 165, 233, 0.7)',
+            gridColor: 'rgba(255, 255, 255, 0.1)',
+            textColor: '#c9d1d9'
+        };
+
+        const defaultChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: chartColors.textColor,
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        color: chartColors.textColor,
+                        font: {
+                           size: 12
+                        }
+                    },
+                    grid: {
+                        color: chartColors.gridColor
+                    }
+                },
+                y: {
+                    ticks: {
+                        color: chartColors.textColor,
+                        font: {
+                           size: 12
+                        }
+                    },
+                    grid: {
+                        color: chartColors.gridColor
+                    }
+                }
+            }
+        };
+
+        function wrapLabel(str, maxWidth) {
+            if (typeof str !== 'string' || str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length > maxWidth) {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                } else {
+                    currentLine += " " + words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        new Chart(document.getElementById('aiEvolutionChart'), {
+            type: 'line',
+            data: {
+                labels: ['2025', '2026', '2027', '2028', '2029', '2030'],
+                datasets: [{
+                    label: 'AI Technology Maturity',
+                    data: [20, 35, 55, 75, 90, 100],
+                    borderColor: chartColors.blue,
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                 plugins: {
+                    ...defaultChartOptions.plugins,
+                    tooltip: {
+                         ...defaultChartOptions.plugins.tooltip,
+                        callbacks: {
+                             ...defaultChartOptions.plugins.tooltip.callbacks,
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                   const milestones = {20: 'Multimodal AI', 35: 'Early Agentic AI', 75: 'Mature Agentic AI', 100: 'General-Purpose AI Utility'};
+                                   label += milestones[context.parsed.y] || context.parsed.y;
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                 }
+            }
+        });
+
+        new Chart(document.getElementById('energyTransitionChart'), {
+            type: 'line',
+            data: {
+                labels: ['2025', '2026', '2027', '2028', '2029', '2030'],
+                datasets: [
+                    {
+                        label: 'Renewable Energy Share (%)',
+                        data: [35, 38, 40, 42, 44, 46],
+                        borderColor: chartColors.emerald,
+                        backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                        fill: true,
+                        tension: 0.4,
+                        yAxisID: 'y'
+                    },
+                     {
+                        label: 'Solar Power Generation (TWh)',
+                        data: [2000, 2500, 3200, 4000, 5000, 6100],
+                        borderColor: chartColors.amber,
+                        tension: 0.4,
+                        yAxisID: 'y1'
+                    }
+                ]
+            },
+            options: { ...defaultChartOptions,
+                scales: {
+                    ...defaultChartOptions.scales,
+                    y: { position: 'left', title: { display: true, text: 'Share of Electricity (%)', color: chartColors.textColor } },
+                    y1: { position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: 'Generation (TWh)', color: chartColors.textColor } },
+                }
+            }
+        });
+
+        new Chart(document.getElementById('gdpGrowthChart'), {
+            type: 'line',
+            data: {
+                labels: ['2025', '2026', '2027', '2028'],
+                datasets: [
+                    {
+                        label: 'World',
+                        data: [3.3, 3.3, 3.1, 3.0],
+                        borderColor: chartColors.sky,
+                        tension: 0.1
+                    },
+                    {
+                        label: 'USA',
+                        data: [1.6, 1.5, 1.5, 1.5],
+                        borderColor: chartColors.blue,
+                        tension: 0.1
+                    },
+                     {
+                        label: 'Eurozone',
+                        data: [1.0, 1.2, 1.4, 1.5],
+                        borderColor: chartColors.amber,
+                        tension: 0.1
+                    },
+                    {
+                        label: 'Korea',
+                        data: [0.8, 1.6, 2.0, 2.2],
+                        borderColor: chartColors.red,
+                        tension: 0.1
+                    }
+                ]
+            },
+            options: {
+                ...defaultChartOptions,
+                scales: {
+                    ...defaultChartOptions.scales,
+                    y: {
+                        ...defaultChartOptions.scales.y,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+        const growingJobs = ['AI & ML Specialists', 'Sustainability Specialists', 'Business Intelligence Analysts', 'Information Security Analysts', 'FinTech Engineers', 'Data Analysts & Scientists'];
+        const decliningJobs = ['Bank Tellers', 'Postal Service Clerks', 'Cashiers & Ticket Clerks', 'Data Entry Clerks', 'Admin & Exec Secretaries', 'Assembly Line Workers'];
+
+        new Chart(document.getElementById('jobMarketChart'), {
+            type: 'bar',
+            data: {
+                labels: [...growingJobs.map(j => wrapLabel(j, 16)), ...decliningJobs.map(j => wrapLabel(j, 16))],
+                datasets: [{
+                    label: 'Job Growth / Decline Rate',
+                    data: [30, 28, 25, 24, 22, 20, -18, -20, -22, -25, -28, -30],
+                     backgroundColor: (context) => {
+                        const value = context.dataset.data[context.dataIndex];
+                        return value > 0 ? chartColors.emerald : chartColors.red;
+                    }
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                indexAxis: 'y',
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                     tooltip: defaultChartOptions.plugins.tooltip
+                },
+                 scales: {
+                    x: {
+                       ...defaultChartOptions.scales.x,
+                        ticks: {
+                             callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    },
+                    y: {
+                         ...defaultChartOptions.scales.y,
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('humanoidRobotChart'), {
+            type: 'bar',
+            data: {
+                labels: ['2026', '2027', '2028', '2029', '2030'],
+                datasets: [{
+                    label: 'Annual Shipments (in 10k units)',
+                    data: [7.5, 15, 30, 50, 80],
+                    backgroundColor: chartColors.amber
+                }]
+            },
+            options: {
+                 ...defaultChartOptions,
+                 plugins: {
+                     legend: { position: 'top' }
+                 }
+            }
+        });
+
+        new Chart(document.getElementById('personalRobotMarketChart'), {
+            type: 'line',
+            data: {
+                labels: ['2025', '2026', '2027', '2028', '2029', '2030'],
+                datasets: [{
+                    label: 'Market Size (Billion USD)',
+                    data: [3.9, 8, 15, 28, 45, 63.8],
+                    borderColor: chartColors.violet,
+                    backgroundColor: 'rgba(139, 92, 246, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+             options: {
+                 ...defaultChartOptions,
+                 plugins: {
+                     legend: { position: 'top' }
+                 }
+            }
+        });
+        
+    </script>
+</body>
+</html>
