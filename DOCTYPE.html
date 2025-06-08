@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTL Korea | 상생형 그린에너지 플랫폼</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #0077B6, #00B4D8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .flowchart-line {
+            position: absolute;
+            background-color: #90E0EF;
+            z-index: -1;
+        }
+        .flowchart-item, .risk-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .flowchart-item:hover, .risk-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Hero Section -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <h1 class="text-4xl md:text-6xl font-black text-gray-800 leading-tight">
+                GTL Korea <span class="gradient-text">상생형 그린에너지 플랫폼</span>
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600">
+                지역과 주민, 기업이 함께 만드는 지속가능한 대한민국
+            </p>
+            <div class="mt-12 flex justify-center">
+                <div class="bg-white rounded-xl shadow-2xl p-8 border-t-4 border-[#0077B6]">
+                    <p class="text-xl font-bold text-gray-700">국가 온실가스 감축 목표(NDC)</p>
+                    <p class="text-6xl font-black text-[#004AAD] mt-2">40%</p>
+                    <p class="text-gray-500 mt-2">2018년 배출량 대비 2030년까지</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Section 1: The Ecosystem Flowchart -->
+        <section class="my-16">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">플랫폼 생태계: 모두를 위한 Win-Win 구조</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                GTL Korea는 중앙 조정자로서 지자체, 금융, 기술, 지역사회를 유기적으로 연결하여 분산형 그린에너지 사업의 전 과정을 촉진하고 관리하는 핵심 역할을 수행합니다.
+            </p>
+            <div class="relative flex flex-col items-center">
+                <div class="flowchart-item bg-gradient-to-br from-[#004AAD] to-[#0077B6] text-white rounded-full w-48 h-48 flex flex-col items-center justify-center shadow-2xl z-10 p-4 text-center">
+                    <h3 class="font-black text-xl">GTL 플랫폼</h3>
+                    <p class="text-xs mt-1">조정 및 운영 총괄</p>
+                </div>
+                <div class="w-full mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+                    <div class="flowchart-item bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#90E0EF] text-center">
+                        <p class="text-3xl">🏛️</p>
+                        <h4 class="font-bold text-xl mt-2 text-[#004AAD]">지방자치단체</h4>
+                        <p class="text-sm text-gray-600 mt-2">부지 제공 및 인허가 지원, 정책 및 보조금 인센티브 부여</p>
+                    </div>
+                    <div class="flowchart-item bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#90E0EF] text-center">
+                        <p class="text-3xl">💰</p>
+                        <h4 class="font-bold text-xl mt-2 text-[#004AAD]">금융기관/투자자</h4>
+                        <p class="text-sm text-gray-600 mt-2">ESG/사회적 금융을 통한 초기 사업자금 대출 및 투자</p>
+                    </div>
+                    <div class="flowchart-item bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#90E0EF] text-center">
+                        <p class="text-3xl">💡</p>
+                        <h4 class="font-bold text-xl mt-2 text-[#004AAD]">국내 기술기업</h4>
+                        <p class="text-sm text-gray-600 mt-2">태양광·ESS·VPP 설비 설계, 시공 및 운영 솔루션 제공</p>
+                    </div>
+                    <div class="flowchart-item bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#90E0EF] text-center">
+                        <p class="text-3xl">🤝</p>
+                        <h4 class="font-bold text-xl mt-2 text-[#004AAD]">주민 협동조합</h4>
+                        <p class="text-sm text-gray-600 mt-2">사업 주체로서 참여 및 운영, 수익 공유 및 지역사회 환원</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Stakeholder Benefits -->
+        <section class="my-24 bg-gray-100 -mx-6 px-6 py-16 rounded-xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">이해관계자별 맞춤형 가치 제안</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                플랫폼의 모든 참여자는 각자의 목표를 달성하며 지속가능한 가치를 함께 창출합니다. 경제적, 사회적, 환경적 이익이 선순환하는 구조입니다.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#0077B6]">주민 협동조합: 에너지 주권과 경제적 이익</h3>
+                    <p class="text-gray-600 mt-2 mb-4">주민이 직접 에너지 생산의 주체가 되어 전기요금을 절감하고, 발생한 수익을 배당받아 가계 소득 증대에 기여합니다.</p>
+                    <div class="chart-container relative w-full h-64 mx-auto max-w-md">
+                        <canvas id="coopBenefitsChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#0077B6]">지방자치단체: 탄소중립 목표 달성</h3>
+                    <p class="text-gray-600 mt-2 mb-4">관내 온실가스 배출량을 효과적으로 감축하고, 지역 에너지 자립도를 높이며 녹색 일자리를 창출하여 지역 경제를 활성화합니다.</p>
+                    <div class="chart-container relative w-full h-64 mx-auto max-w-md">
+                        <canvas id="lguBenefitsChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                     <h3 class="text-2xl font-bold text-[#0077B6]">국내 기술기업: 새로운 성장 기회</h3>
+                    <p class="text-gray-600 mt-2 mb-4">안정적인 지역 기반 프로젝트를 통해 시장 접근성을 높이고, 기술 실증(Track Record)을 확보하여 기업 경쟁력을 강화합니다.</p>
+                     <div class="chart-container relative w-full h-64 mx-auto max-w-md">
+                        <canvas id="techBenefitsChart"></canvas>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-6">
+                     <h3 class="text-2xl font-bold text-[#0077B6]">금융기관: 신뢰도 높은 ESG 투자</h3>
+                    <p class="text-gray-600 mt-2 mb-4">GTL의 K-Taxonomy 전문성을 통해 검증된, 사회적·환경적 가치를 동시에 창출하는 녹색 투자처를 발굴하고 안정적인 수익을 기대합니다.</p>
+                    <div class="chart-container relative w-full h-64 mx-auto max-w-md">
+                        <canvas id="financeBenefitsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Platform Service Flow -->
+        <section class="my-24">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">9단계 플랫폼 서비스 흐름</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                프로젝트 발굴부터 수익 분배까지, GTL 플랫폼은 복잡한 과정을 체계적으로 관리하여 사업의 투명성과 효율성을 극대화합니다.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow"><span class="text-3xl font-black text-[#00B4D8]">1</span><h4 class="font-bold text-lg mt-2">프로젝트 발굴 및 기획</h4><p class="text-sm text-gray-500 mt-1">사업 타당성, 경제성, 환경성 분석</p></div>
+                <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow"><span class="text-3xl font-black text-[#00B4D8]">2</span><h4 class="font-bold text-lg mt-2">지자체 및 주민 협의</h4><p class="text-sm text-gray-500 mt-1">공감대 형성 및 참여 동의 확보</p></div>
+                <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow"><span class="text-3xl font-black text-[#00B4D8]">3</span><h4 class="font-bold text-lg mt-2">주민 협동조합 설립</h4><p class="text-sm text-gray-500 mt-1">법률/행정 지원 및 조합원 모집</p></div>
+                <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow"><span class="text-3xl font-black text-[#00B4D8]">4</span><h4 class="font-bold text-lg mt-2">사업 설계 및 인허가</h4><p class="text-sm text-gray-500 mt-1">K-Taxonomy 부합 설계 및 허가 취득</p></div>
+                <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow"><span class="text-3xl font-black text-[#00B4D8]">5</span><h4 class="font-bold text-lg mt-2">자금 조달 (금융 연계)</h4><p class="text-sm text-gray-500 mt-1">정책자금, ESG/사회적 금융 투자 유치</p></div>
+                <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow"><span class="text-3xl font-black text-[#00B4D8]">6</span><h4 class="font-bold text-lg mt-2">설비 구축 및 시운전</h4><p class="text-sm text-gray-500 mt-1">품질 및 안전 관리, 성능 검증</p></div>
+                <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow"><span class="text-3xl font-black text-[#00B4D8]">7</span><h4 class="font-bold text-lg mt-2">상업 운영 및 유지보수</h4><p class="text-sm text-gray-500 mt-1">VPP 연계 및 안정적 전력 생산</p></div>
+                <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow"><span class="text-3xl font-black text-[#00B4D8]">8</span><h4 class="font-bold text-lg mt-2">수익 정산 및 분배</h4><p class="text-sm text-gray-500 mt-1">투명한 시스템 기반 자동 배당</p></div>
+                <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow"><span class="text-3xl font-black text-[#00B4D8]">9</span><h4 class="font-bold text-lg mt-2">성과 평가 및 환류</h4><p class="text-sm text-gray-500 mt-1">사업 개선 및 우수사례 확산</p></div>
+            </div>
+        </section>
+
+        <!-- Section 4: ROI Simulation -->
+        <section class="my-24 bg-white -mx-6 px-6 py-16 rounded-xl shadow-inner">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">주민 참여 투자 수익 시뮬레이션</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                조합원 가입 시 기대할 수 있는 경제적 가치를 시나리오별로 분석했습니다. 초기 투자금 대비 안정적인 수익과 빠른 원금 회수를 기대할 수 있습니다. (5kW 태양광 + 10kWh ESS, 자기자본 150만원 기준)
+            </p>
+            <div class="chart-container relative w-full h-96 mx-auto max-w-4xl">
+                <canvas id="roiChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Section 5: Roadmap -->
+        <section class="my-24">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">단계별 사업 추진 로드맵</h2>
+            <div class="relative w-full">
+                <div class="absolute top-1/2 left-0 w-full h-1 bg-[#90E0EF] -translate-y-1/2"></div>
+                <div class="relative flex justify-between">
+                    <div class="flex flex-col items-center w-1/2 pr-8 text-right">
+                        <div class="absolute top-1/2 -translate-y-1/2 right-1/2 w-6 h-6 bg-[#0077B6] rounded-full border-4 border-white"></div>
+                        <h4 class="font-black text-2xl text-[#004AAD]">1단계: 시범사업 착수</h4>
+                        <p class="font-bold text-gray-700">(~18개월)</p>
+                        <ul class="text-sm text-gray-600 mt-2 list-disc list-inside text-left inline-block"><li>1~2개 선도 지자체 선정</li><li>2~3개 협동조합 프로젝트(1MW급)</li><li>플랫폼 모델 검증 및 KPI 달성</li></ul>
+                    </div>
+                     <div class="flex flex-col items-center w-1/2 pl-8 text-left">
+                        <div class="absolute top-1/2 -translate-y-1/2 left-1/2 w-6 h-6 bg-[#0077B6] rounded-full border-4 border-white"></div>
+                        <h4 class="font-black text-2xl text-[#004AAD]">2단계: 전국 확장</h4>
+                        <p class="font-bold text-gray-700">(2~5년차)</p>
+                        <ul class="text-sm text-gray-600 mt-2 list-disc list-inside"><li>표준화된 툴킷 기반 사업 복제</li><li>분산에너지 특화지역 중심 확장</li><li>기술 고도화 및 서비스 다각화</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: GTL Revenue & Risk Management -->
+        <section class="my-24 bg-gray-100 -mx-6 px-6 py-16 rounded-xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">GTL의 지속가능한 운영: 수익 모델과 리스크 관리</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-[#0077B6] mb-4">다각화된 플랫폼 수익 모델</h3>
+                    <p class="text-gray-600 mb-6">GTL은 플랫폼 운영을 통해 안정적이고 다각화된 수익 구조를 확보하여, 지속적인 서비스 개선과 생태계 활성화에 재투자합니다.</p>
+                    <div class="chart-container relative w-full h-80">
+                        <canvas id="gtlRevenueChart"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-[#0077B6] mb-4">선제적 리스크 관리</h3>
+                     <p class="text-gray-600 mb-6">성공적인 사업 수행을 위해 정책, 기술, 시장, 사회적 변수를 면밀히 분석하고 체계적인 대응 방안을 마련합니다.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="risk-card bg-white p-4 rounded-lg shadow-md"><p class="text-2xl mb-2">⚖️</p><h4 class="font-bold text-lg text-gray-800">정책/규제</h4><p class="text-xs text-gray-500 mt-1">지속적인 모니터링 및 유연한 사업 구조 설계</p></div>
+                        <div class="risk-card bg-white p-4 rounded-lg shadow-md"><p class="text-2xl mb-2">⚙️</p><h4 class="font-bold text-lg text-gray-800">기술/운영</h4><p class="text-xs text-gray-500 mt-1">엄격한 파트너 선정 및 품질/성능 보증</p></div>
+                        <div class="risk-card bg-white p-4 rounded-lg shadow-md"><p class="text-2xl mb-2">📈</p><h4 class="font-bold text-lg text-gray-800">시장/금융</h4><p class="text-xs text-gray-500 mt-1">보수적 재무 모델링 및 장기 계약 추진</p></div>
+                        <div class="risk-card bg-white p-4 rounded-lg shadow-md"><p class="text-2xl mb-2">👨‍👩‍👧‍👦</p><h4 class="font-bold text-lg text-gray-800">주민/사회</h4><p class="text-xs text-gray-500 mt-1">투명한 소통 및 공정한 이익 공유 구조 확립</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Call to Action -->
+        <section class="my-24 text-center">
+            <h2 class="text-3xl font-bold text-gray-800">미래를 위한 동행, 지금 시작하세요</h2>
+            <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">GTL Korea의 상생형 그린에너지 플랫폼은 지속 가능한 미래를 향한 혁신적인 발걸음입니다. 지자체, 금융기관, 기술기업, 그리고 지역사회의 모든 파트너를 기다립니다.</p>
+            <button class="mt-8 bg-gradient-to-r from-[#0077B6] to-[#00B4D8] text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                파트너십 문의하기
+            </button>
+        </section>
+    </main>
+
+    <footer class="bg-[#004AAD] text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <h3 class="text-2xl font-bold">GTL Korea</h3>
+            <p class="mt-2">함께 만드는 녹색 대한민국, GTL Korea가 앞장서겠습니다.</p>
+            <p class="text-xs mt-4 text-gray-400">&copy; 2025 GTL Korea. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 
+        Colour Palette Selection: Brilliant Blues (#004AAD, #0077B6, #90E0EF) with Yellow/Gold accent (#FFC300).
+        Narrative Plan: Hero -> Ecosystem -> Stakeholder Value -> Process Flow -> ROI -> Roadmap -> Revenue & Risk -> CTA.
+        Visualization Plan:
+        - Ecosystem: HTML/CSS Flowchart. Goal: Organize. Method: Structured HTML/CSS. (NO SVG/Mermaid)
+        - Benefits Charts (Coop, LGU, Tech, Finance): Donut/Bar/Pie. Goal: Compare. Library: Chart.js/Canvas. (NO SVG)
+        - ROI Simulation: Bar Chart. Goal: Compare. Library: Chart.js/Canvas. (NO SVG)
+        - Roadmap: Timeline. Goal: Change. Method: Structured HTML/CSS. (NO SVG/Mermaid)
+        - GTL Revenue: Horizontal Bar Chart. Goal: Compare. Library: Chart.js/Canvas. (NO SVG)
+        - Risk Management: Card Grid. Goal: Organize. Method: Structured HTML/CSS. (NO SVG/Mermaid)
+        Confirmation: This file does not contain any SVG or Mermaid JS. All diagrams are implemented using either Chart.js on a Canvas element or structured HTML and Tailwind CSS.
+    -->
+
+    <script>
+        const wrapLabel = (label) => {
+            const maxLen = 16;
+            if (label.length <= maxLen) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).length > maxLen) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine === '' ? word : currentLine + ' ' + word);
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            return Array.isArray(label) ? label.join(' ') : label;
+        };
+
+        const chartOptionsTemplate = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom', labels: { padding: 20, font: { size: 12 } } },
+                tooltip: { callbacks: { title: tooltipTitleCallback } }
+            }
+        };
+
+        // Chart 1: Coop Benefits (Donut)
+        const coopCtx = document.getElementById('coopBenefitsChart').getContext('2d');
+        new Chart(coopCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['연간 전기요금 10~20% 절감', '연 5~8% 투자금 대비 수익 배당', '보조금 및 세제 혜택'],
+                datasets: [{ data: [45, 40, 15], backgroundColor: ['#0077B6', '#90E0EF', '#00B4D8'], borderColor: '#ffffff', borderWidth: 2 }]
+            },
+            options: { ...chartOptionsTemplate, plugins: { ...chartOptionsTemplate.plugins, legend: { ...chartOptionsTemplate.plugins.legend, position: 'right' } } }
+        });
+
+        // Chart 2: LGU Benefits (Bar)
+        const lguCtx = document.getElementById('lguBenefitsChart').getContext('2d');
+        new Chart(lguCtx, {
+            type: 'bar',
+            data: {
+                labels: ['온실가스 감축 (tCO2)', '지역 일자리 창출 (명)', '에너지 자립도 향상 (%)'],
+                datasets: [{ label: '지자체 기대효과 (1MW 사업 기준)', data: [900, 4, 15], backgroundColor: ['#0077B6', '#90E0EF', '#00B4D8'], borderRadius: 5 }]
+            },
+            options: { ...chartOptionsTemplate, scales: { y: { beginAtZero: true, grid: { display: false } }, x: { grid: { display: false } } }, plugins: { ...chartOptionsTemplate.plugins, legend: { display: false } } }
+        });
+        
+        // Chart 3: Tech Company Benefits (Bar)
+        const techCtx = document.getElementById('techBenefitsChart').getContext('2d');
+        new Chart(techCtx, {
+            type: 'bar',
+            data: {
+                labels: ['사업 개발 비용 절감', '신규 시장 접근성 증대', '브랜드 신뢰도 향상'],
+                datasets: [{ label: '기술기업 성장 기회', data: [70, 90, 80], backgroundColor: ['#0077B6', '#90E0EF', '#00B4D8'], borderRadius: 5, barPercentage: 0.6, }]
+            },
+            options: { ...chartOptionsTemplate, indexAxis: 'y', scales: { x: { beginAtZero: true, max: 100, ticks: { callback: (v) => v + "%" }, grid: { display: false } }, y: { grid: { display: false } } }, plugins: { ...chartOptionsTemplate.plugins, legend: { display: false } } }
+        });
+        
+        // Chart 4: Financial Institution Benefits (Pie)
+        const financeCtx = document.getElementById('financeBenefitsChart').getContext('2d');
+        new Chart(financeCtx, {
+            type: 'pie',
+            data: {
+                labels: ['K-Taxonomy 부합 녹색 투자', '사회적 가치(S) 투자', '안정적 수익(G) 확보'],
+                datasets: [{ data: [50, 30, 20], backgroundColor: ['#0077B6', '#90E0EF', '#00B4D8'], borderColor: '#ffffff', borderWidth: 2 }]
+            },
+            options: { ...chartOptionsTemplate }
+        });
+
+        // Chart 5: ROI Simulation (Bar)
+        const roiCtx = document.getElementById('roiChart').getContext('2d');
+        new Chart(roiCtx, {
+            type: 'bar',
+            data: {
+                labels: ['보수적 시나리오', '기본 시나리오', '낙관적 시나리오'],
+                datasets: [
+                    { label: '순 연간 편익 (만원)', data: [15, 30, 45], backgroundColor: '#0077B6', yAxisID: 'y', borderRadius: 5 },
+                    { label: '투자 회수 기간 (년)', data: [10, 5, 3.3], backgroundColor: '#90E0EF', yAxisID: 'y1', borderRadius: 5 }
+                ]
+            },
+            options: { ...chartOptionsTemplate, scales: { x: { grid: { display: false } }, y: { type: 'linear', display: true, position: 'left', beginAtZero: true, title: { display: true, text: '순 연간 편익 (만원)' } }, y1: { type: 'linear', display: true, position: 'right', beginAtZero: true, title: { display: true, text: '투자 회수 기간 (년)' }, grid: { drawOnChartArea: false } } } }
+        });
+
+        // Chart 6: GTL Revenue (Horizontal Bar)
+        const gtlRevenueCtx = document.getElementById('gtlRevenueChart').getContext('2d');
+        new Chart(gtlRevenueCtx, {
+            type: 'bar',
+            data: {
+                labels: ['VPP 운영/관리 수수료', '금융 조달 중개 수수료', '프로젝트 개발 수수료', 'K-Taxonomy 컨설팅'],
+                datasets: [{
+                    label: '수익 기여도',
+                    data: [40, 30, 20, 10],
+                    backgroundColor: ['#0077B6', '#00B4D8', '#90E0EF', '#CAF0F8'],
+                    borderRadius: 5
+                }]
+            },
+            options: { ...chartOptionsTemplate, indexAxis: 'y', scales: { x: { beginAtZero: true, ticks: { callback: (v) => v + "%" }, grid: { display: false } }, y: { grid: { display: false } } }, plugins: { ...chartOptionsTemplate.plugins, legend: { display: false } } }
+        });
+
+    </script>
+</body>
+</html>
